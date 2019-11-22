@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<script type="text/javascript">
+    function validate() {
+        var credits=document.getElementById("credits").value;
+        if (isNaN(credits)|| credits<=0 || credits>=16) {
+		     
+			 alert("Credits must be a number greater than 0 and less than 16");
+			 document.getElementById("pid").innerHTML = "Updated text for the paragraph";
+             return false
+       }
+	   
+    }
+</script>
+</head> <body>
+
+<form action="hello.php" onsubmit="return validate()" method ="post">
+    Title: <input type="text" id="titl" name = "title" size="20"><br />
+    Credits: <input type="text" id="credits", name="crd" size="2"><br />
+    <Input type="submit" value="Submit">
+</form>
+
+<p id = "pid"> default text of the paragraph</p>
+<script type=
+</body> </html>
