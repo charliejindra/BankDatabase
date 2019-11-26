@@ -38,7 +38,7 @@
 
 ?>
    <hr width="50">
-<a href="Frontpage.html" style="color:red;font-weight:bold;">Home</a>
+<a href="../Frontpage.html" style="color:red;font-weight:bold;">Home</a>
 <hr width="50">
    </div>
 </body>
