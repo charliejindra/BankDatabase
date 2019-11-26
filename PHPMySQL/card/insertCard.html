@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Add New Record in MySQL Database</title>
+   </head>
+
+   <body>
+   <div style="height:900px; background-color: lightblue;" align="center">
+      
+	  <br><br><br><br>
+     <p>Enter Account Info to Create an Account:<br> </p>
+      <form method = "post" action = "insertCard.php">
+         <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">
+            <tr>
+               <td width = "250">Card Number</td>
+               <td>
+                  <input name = "i_card_number" type = "text" id = "i_card_number">
+               </td>
+            </tr>
+         
+            <tr>
+               <td width = "250">Card Type</td>
+               <td>
+                  <input name = "i_card_type" type = "text" id = "i_card_type">
+               </td>
+            </tr>
+         
+            <tr>
+               <td width = "250">Account Number</td>
+               <td>
+                  <input name = "i_account_number" type = "text" id = "i_account_number">
+               </td>
+            </tr>
+      
+            <tr>
+               <td width = "250">Credit</td>
+               <td> <input name="i_credit" type= "text" id = "i_credit"> </td>
+            </tr>
+            <tr>
+               <td width = "250"></td>
+               <td> </td>
+            </tr>
+         
+            <tr>
+               <td width = "250"> </td>
+               <td>
+                  <input name = "add" type = "submit" id = "add"  value = "Add Card">
+               </td>
+            </tr>
+			
+         </table>
+   
+
+   <hr width="50">
+<a href="../Frontpage.html" style="color:red;font-weight:bold;">Home</a>
+<hr width="50">
+   </div>
+   
+   </body>
+</html>

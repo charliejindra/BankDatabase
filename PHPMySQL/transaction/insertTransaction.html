@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Add New Record in MySQL Database</title>
+   </head>
+
+   <body>
+   <div style="height:900px; background-color: lightblue;" align="center">
+      
+	  <br><br><br><br>
+     <p>Enter Account Info to Create an Account:<br> </p>
+      <form method = "post" action = "insertTransaction.php">
+         <table width = "600" border = "0" cellspacing = "1" cellpadding = "2">
+            <tr>
+               <td width = "250">To Account:</td>
+               <td>
+                  <input name = "i_to_account" type = "text" id = "i_cto_account">
+               </td>
+            </tr>
+         
+            <tr>
+               <td width = "250">From Account:</td>
+               <td>
+                  <input name = "i_from_account" type = "text" id = "i_from_account">
+               </td>
+            </tr>
+      
+            <tr>
+               <td width = "250">Amount</td>
+               <td> <input name="i_amount" type= "text" id = "i_amount"> </td>
+            </tr>
+            <tr>
+               <td width = "250"></td>
+               <td> </td>
+            </tr>
+         
+            <tr>
+               <td width = "250"> </td>
+               <td>
+                  <input name = "add" type = "submit" id = "add"  value = "Create Transaction">
+               </td>
+            </tr>
+			
+         </table>
+   
+
+   <hr width="50">
+<a href="../Frontpage.html" style="color:red;font-weight:bold;">Home</a>
+<hr width="50">
+   </div>
+   
+   </body>
+</html>
