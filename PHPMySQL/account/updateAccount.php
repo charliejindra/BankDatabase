@@ -21,17 +21,44 @@
 	echo " <br> Account table before update <br>";
     
     show_instructor($conn);
-    
-            
-    $sql_AN = "UPDATE `account` SET `account_number`= $i_AN WHERE ID='$i_ID'";
-    $sql_AT = "UPDATE `account` SET `account_number`= $i_AT WHERE ID='$i_ID'";
-    $sql_bal = "UPDATE `account` SET `account_number`= $i_bal WHERE ID='$i_ID'";
-    $sql_PIN = "UPDATE `account` SET `account_number`= $i_PIN WHERE ID='$i_ID'";
+        
+
+    $sql_AN = "UPDATE `account` SET `account_number`= '$i_AN' WHERE ID='$i_ID'";
+    $sql_AT = "UPDATE `account` SET `account_number`= '$i_AT' WHERE ID='$i_ID'";
+    $sql_bal = "UPDATE `account` SET `account_number`= '$i_bal' WHERE ID='$i_ID'";
+    $sql_PIN = "UPDATE `account` SET `account_number`= '$i_PIN' WHERE ID='$i_ID'";
     
     
     //mysqli_select_db($conn,'university');
-    $retval = mysqli_query($conn, $sql); // procedural execution of query
-         
+
+
+    if ($i_AN != ""){ 
+        $retval = mysqli_query($conn, $sql_AN); // procedural execution of query
+    }
+    if(! $retval ) {
+        die('Could not enter data: ' . mysqli_error($conn));
+    }
+
+
+    if ($i_AT != ""){ 
+        $retval = mysqli_query($conn, $sql_AT); // procedural execution of query
+    }
+    if(! $retval ) {
+        die('Could not enter data: ' . mysqli_error($conn));
+    }
+
+
+    if ($i_bal != ""){ 
+        $retval = mysqli_query($conn, $sql_bal); // procedural execution of query
+    }
+    if(! $retval ) {
+        die('Could not enter data: ' . mysqli_error($conn));
+    }
+
+
+    if ($i_PIN != ""){ 
+        $retval = mysqli_query($conn, $sql_PIN); // procedural execution of query
+    }
     if(! $retval ) {
         die('Could not enter data: ' . mysqli_error($conn));
     }
