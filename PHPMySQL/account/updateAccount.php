@@ -8,8 +8,8 @@
 
 <?php
 	  
-	require("tableshow.php"); 
-	require("dbconnect.php");            
+	require("../tableshow.php"); 
+	require("../dbconnect.php");            
 
 
     $i_ID = $_POST['i_ID'];
