@@ -1,43 +1,43 @@
 <?php
 
-function show_account($conn) {
+// function show_account($conn) {
 
-	//include "dbconnect.php";
+// 	//include "dbconnect.php";
 
-	$sql = "SELECT account_number, customer_ID, account_type, balance FROM account";
-	$result = $conn->query($sql); // object oriented execution of query
+// 	$sql = "SELECT account_number, customer_ID, account_type, balance FROM account";
+// 	$result = $conn->query($sql); // object oriented execution of query
 
-		if ($result->num_rows > 0) {
+// 		if ($result->num_rows > 0) {
 			
-			echo "<br><h3> Account <h3> <br>";
+// 			echo "<br><h3> Account <h3> <br>";
 			
-			echo '<table border>';
-			echo '<thead><tr>';
-			echo '<th>'."account_number".'</th>'.'<th>'."customer_ID".'</th>'.'<th>'."account_type".'</th>'.'<th>'."balance".'</th>';
-			echo '</tr></thead>';
-			echo '<tbody>';
+// 			echo '<table border>';
+// 			echo '<thead><tr>';
+// 			echo '<th>'."account_number".'</th>'.'<th>'."customer_ID".'</th>'.'<th>'."account_type".'</th>'.'<th>'."balance".'</th>';
+// 			echo '</tr></thead>';
+// 			echo '<tbody>';
 
-			while($row = $result->fetch_assoc()) {
-				echo '<tr>';
-				echo "<td>" . $row["account_number"]. "</td>";
-				echo "<td>" . $row["customer_ID"]. "</td>";
-				echo "<td>" . $row["account_type"]. "</td>";
-				echo "<td>" . $row["balance"]. "</td>";
-				echo '</tr>';
-			}
+// 			while($row = $result->fetch_assoc()) {
+// 				echo '<tr>';
+// 				echo "<td>" . $row["account_number"]. "</td>";
+// 				echo "<td>" . $row["customer_ID"]. "</td>";
+// 				echo "<td>" . $row["account_type"]. "</td>";
+// 				echo "<td>" . $row["balance"]. "</td>";
+// 				echo '</tr>';
+// 			}
 			
-			echo '</tbody>';
-			echo '</table>';
+// 			echo '</tbody>';
+// 			echo '</table>';
 			
-			// output data of each row
+// 			// output data of each row
 			
 			
-		} 
-		else {
-			echo "0 results";
-		}
-	//$conn->close();
-}
+// 		} 
+// 		else {
+// 			echo "0 results";
+// 		}
+// 	//$conn->close();
+// }
 
 
 unction show_customer($conn) {

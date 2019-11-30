@@ -12,8 +12,9 @@
 
 <?php
 	  
-	require("../tableshow.php"); 
-	require("../dbconnect.php");            
+	require("../tableshow.php");
+    require("../dbconnect.php");
+    require("../insertFuncs.php");
         
 	// if(! get_magic_quotes_gpc() ) { // if magic qoutes is not set, then add escapes manually and get Posted parameters in local variables
     //     $i_name = addslashes ($_POST['i_name']);
@@ -44,7 +45,10 @@
     echo "Entered data successfully\n";
 			
 	echo " <br> Instructor table after insertion <br>";
-	show_account($conn);
+    show_account($conn);
+    
+    create_transaction($conn, $i_acctNo, $i_acctNo, $i_balance);
+    echo("initial deposit logged in Transactions.");
 			
     mysqli_close($conn);    
 

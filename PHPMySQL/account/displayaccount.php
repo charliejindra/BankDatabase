@@ -6,8 +6,8 @@
 
 
 <?php
-require("dbconnect.php");
-require("tableshow.php");
+require("../dbconnect.php");
+require("../tableshow.php");
 show_account($conn);
 ?>
 
