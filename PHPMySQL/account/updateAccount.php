@@ -17,16 +17,21 @@
     $i_AT = $_POST['i_AT'];
     $i_bal = $_POST['i_bal'];
     $i_PIN = $_POST['i_PIN'];
+
+    if($i_ID = ""){
+        echo "You must provide an ID to update";
+    }
+    else{
 			
 	echo " <br> Account table before update <br>";
     
     show_instructor($conn);
-        
+    
 
     $sql_AN = "UPDATE `account` SET `account_number`= '$i_AN' WHERE ID='$i_ID'";
-    $sql_AT = "UPDATE `account` SET `account_number`= '$i_AT' WHERE ID='$i_ID'";
-    $sql_bal = "UPDATE `account` SET `account_number`= '$i_bal' WHERE ID='$i_ID'";
-    $sql_PIN = "UPDATE `account` SET `account_number`= '$i_PIN' WHERE ID='$i_ID'";
+    $sql_AT = "UPDATE `account` SET `account_type`= '$i_AT' WHERE ID='$i_ID'";
+    $sql_bal = "UPDATE `account` SET `balance`= '$i_bal' WHERE ID='$i_ID'";
+    $sql_PIN = "UPDATE `account` SET `PIN`= '$i_PIN' WHERE ID='$i_ID'";
     
     
     //mysqli_select_db($conn,'university');
@@ -70,13 +75,12 @@
 	show_instructor($conn);
 			
     mysqli_close($conn);    
-
+    }
 ?>
-
 
 <br><br><br><br>
 <hr width="50">
-<a href="Frontpage.html" style="color:red;font-weight:bold;">Home</a>
+<a href="../Frontpage.html" style="color:red;font-weight:bold;">Home</a>
 <hr width="50">
 <br>
 </div>
