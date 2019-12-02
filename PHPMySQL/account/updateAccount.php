@@ -25,7 +25,7 @@
 			
 	echo " <br> Account table before update <br>";
     
-    show_instructor($conn);
+    show_customer($conn);
     
 
     $sql_AN = "UPDATE `account` SET `account_number`= '$i_AN' WHERE ID='$i_ID'";
@@ -72,7 +72,7 @@
     echo "Entered data successfully\n";
 			
 	echo " <br> Account table after update <br>";
-	show_instructor($conn);
+	show_customer($conn);
 			
     mysqli_close($conn);    
     }

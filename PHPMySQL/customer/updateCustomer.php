@@ -30,7 +30,7 @@
 			
 	echo " <br> Customer table before update <br>";
     
-    show_instructor($conn);
+    show_customer($conn);
     
 
     $sql_UN = "UPDATE `customer` SET `username`= '$i_UN' WHERE Customer_ID='$i_ID'";
@@ -47,18 +47,20 @@
     //mysqli_select_db($conn,'university');
 
 
-    if ($i_UN != ""){ 
-        $retval = mysqli_query($conn, $sql_UN); // procedural execution of query
+    $retval = false;
+
+    if ($i_UN != ""){  //if they entered something in the box
+        $retval = mysqli_query($conn, $sql_UN); //execution of query
     }
-    if(! $retval ) {
-        die('Could not enter data: ' . mysqli_error($conn));
+    if($i_UN != "" && !$retval ) { //if a query was supposed to run but failed
+        die('Could not enter data: ' . mysqli_error($conn)); //give error
     }
 
 
     if ($i_PW != ""){ 
         $retval = mysqli_query($conn, $sql_PW); // procedural execution of query
     }
-    if(! $retval ) {
+    if($i_PW != "" && !$retval ) {
         die('Could not enter data: ' . mysqli_error($conn));
     }
 
@@ -66,7 +68,7 @@
     if ($i_AH != ""){ 
         $retval = mysqli_query($conn, $sql_AH); // procedural execution of query
     }
-    if(! $retval ) {
+    if($i_AH != "" && !$retval ) {
         die('Could not enter data: ' . mysqli_error($conn));
     }
 
@@ -74,42 +76,42 @@
     if ($i_BD != ""){ 
         $retval = mysqli_query($conn, $sql_BD); // procedural execution of query
     }
-    if(! $retval ) {
+    if($i_BD != "" && !$retval ) {
         die('Could not enter data: ' . mysqli_error($conn));
     }
 
     if ($i_SSN != ""){ 
         $retval = mysqli_query($conn, $sql_SSN); // procedural execution of query
     }
-    if(! $retval ) {
+    if($i_SSN != "" && !$retval ) {
         die('Could not enter data: ' . mysqli_error($conn));
     }
 
     if ($i_PN != ""){ 
         $retval = mysqli_query($conn, $sql_PN); // procedural execution of query
     }
-    if(! $retval ) {
+    if($i_PN != "" && !$retval ) {
         die('Could not enter data: ' . mysqli_error($conn));
     }
 
     if ($i_EM != ""){ 
         $retval = mysqli_query($conn, $sql_EM); // procedural execution of query
     }
-    if(! $retval ) {
+    if($i_EM != "" && !$retval ) {
         die('Could not enter data: ' . mysqli_error($conn));
     }
 
     if ($i_AO != ""){ 
         $retval = mysqli_query($conn, $sql_AO); // procedural execution of query
     }
-    if(! $retval ) {
+    if($i_AO != "" && !$retval ) {
         die('Could not enter data: ' . mysqli_error($conn));
     }
 
     if ($i_AT != ""){ 
         $retval = mysqli_query($conn, $sql_AT); // procedural execution of query
     }
-    if(! $retval ) {
+    if($i_AT != "" && !$retval ) {
         die('Could not enter data: ' . mysqli_error($conn));
     }
 
@@ -117,7 +119,7 @@
     echo "Entered data successfully\n";
 			
 	echo " <br> Account table after update <br>";
-	show_instructor($conn);
+	show_customer($conn);
 			
     mysqli_close($conn);    
     }

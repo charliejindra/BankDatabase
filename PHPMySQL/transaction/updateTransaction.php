@@ -26,7 +26,7 @@
 			
 	echo " <br> Transaction table before update <br>";
     
-    show_instructor($conn);
+    show_customer($conn);
     
 
     $sql_TO = "UPDATE `Transaction` SET `to_account`= '$i_TO' WHERE transaction_number='$i_TN'";
@@ -81,7 +81,7 @@
     echo "Entered data successfully\n";
 			
 	echo " <br> Account table after update <br>";
-	show_instructor($conn);
+	show_customer($conn);
 			
     mysqli_close($conn);    
     }

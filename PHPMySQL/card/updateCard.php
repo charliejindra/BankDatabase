@@ -23,7 +23,7 @@
 			
 	echo " <br> Card table before update <br>";
     
-    show_instructor($conn);
+    show_customer($conn);
     
 
     $sql_CT = "UPDATE `card` SET `card_type`= '$i_AN' WHERE card_number='$i_CN'";
@@ -53,7 +53,7 @@
     echo "Entered data successfully\n";
 			
 	echo " <br> Card table after update <br>";
-	show_instructor($conn);
+	show_customer($conn);
 			
     mysqli_close($conn);    
     }
