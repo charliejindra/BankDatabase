@@ -19,69 +19,71 @@
     $i_DT = $_POST['i_DT'];
     $i_TI = $_POST['i_TI'];
 
-    if($i_ID = ""){
+    if($i_TN == ""){
         echo "You must provide a transaction number to update";
     }
     else{
 			
 	echo " <br> Transaction table before update <br>";
     
-    show_customer($conn);
+    show_transactions($conn);
     
 
-    $sql_TO = "UPDATE `Transaction` SET `to_account`= '$i_TO' WHERE transaction_number='$i_TN'";
-    $sql_FR = "UPDATE `Transaction` SET `from_account`= '$i_FR' WHERE transaction_number='$i_TN'";
-    $sql_AM = "UPDATE `Transaction` SET `amount`= '$i_AM' WHERE transaction_number='$i_TN'";
-    $sql_DT = "UPDATE `Transaction` SET `trans_date`= '$i_DT' WHERE transaction_number='$i_TN'";
-    $sql_TI = "UPDATE `Transaction` SET `trans_time`= '$i_TI' WHERE transaction_number='$i_TN'";    
+    $sql_TO = "UPDATE `transaction_history` SET `to_account`= '$i_TO' WHERE transaction_number='$i_TN'";
+    $sql_FR = "UPDATE `transaction_history` SET `from_account`= '$i_FR' WHERE transaction_number='$i_TN'";
+    $sql_AM = "UPDATE `transaction_history` SET `amount`= '$i_AM' WHERE transaction_number='$i_TN'";
+    $sql_DT = "UPDATE `transaction_history` SET `trans_date`= '$i_DT' WHERE transaction_number='$i_TN'";
+    $sql_TI = "UPDATE `transaction_history` SET `trans_time`= '$i_TI' WHERE transaction_number='$i_TN'";    
     
     
     //mysqli_select_db($conn,'university');
 
 
+    $retval = false;
+
     if ($i_TO != ""){ 
         $retval = mysqli_query($conn, $sql_TO); // procedural execution of query
-    }
-    if(! $retval ) {
-        die('Could not enter data: ' . mysqli_error($conn));
+        if(! $retval ) {
+            die('Could not enter data: ' . mysqli_error($conn));
+        }
     }
 
 
     if ($i_FR != ""){ 
         $retval = mysqli_query($conn, $sql_FR); // procedural execution of query
-    }
-    if(! $retval ) {
-        die('Could not enter data: ' . mysqli_error($conn));
+        if(! $retval ) {
+            die('Could not enter data: ' . mysqli_error($conn));
+        }
     }
 
 
     if ($i_AM != ""){ 
         $retval = mysqli_query($conn, $sql_AM); // procedural execution of query
-    }
-    if(! $retval ) {
-        die('Could not enter data: ' . mysqli_error($conn));
+        if(! $retval ) {
+            die('Could not enter data: ' . mysqli_error($conn));
+        }
     }
 
 
     if ($i_DT != ""){ 
         $retval = mysqli_query($conn, $sql_DT); // procedural execution of query
-    }
-    if(! $retval ) {
-        die('Could not enter data: ' . mysqli_error($conn));
+        if(! $retval ) {
+            die('Could not enter data: ' . mysqli_error($conn));
+        }
     }
 
     if ($i_TI != ""){ 
         $retval = mysqli_query($conn, $sql_TI); // procedural execution of query
-    }
-    if(! $retval ) {
-        die('Could not enter data: ' . mysqli_error($conn));
+        if(! $retval ) {
+            die('Could not enter data: ' . mysqli_error($conn));
+        }
     }
 
     echo "<br><br><br><br>";
     echo "Entered data successfully\n";
 			
 	echo " <br> Account table after update <br>";
-	show_customer($conn);
+	show_transactions($conn);
 			
     mysqli_close($conn);    
     }
