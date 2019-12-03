@@ -8,7 +8,7 @@
 <?php
 require("../dbconnect.php");
 require("../tableshow.php");
-show_instructor($conn);
+show_card($conn);
 ?>
 
 
