@@ -28,9 +28,6 @@
     $i_customerID = $_POST['i_customerID'];
     $i_acctType = $_POST['i_acctType'];
     $i_balance = $_POST['i_balance'];
-			
-	echo " <br> Instructor table before insertion <br>";
-	show_account($conn);
    
     $sql = "INSERT INTO account "."(account_number, customer_ID, account_type, balance) "."VALUES ".
                "('$i_acctNo','$i_customerID','$i_acctType', '$i_balance')";
@@ -44,7 +41,7 @@
          
     echo "Entered data successfully\n";
 			
-	echo " <br> Instructor table after insertion <br>";
+	echo " <br> Accounts <br>";
     show_account($conn);
     
     create_transaction($conn, $i_acctNo, $i_acctNo, $i_balance);

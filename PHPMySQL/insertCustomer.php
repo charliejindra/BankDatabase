@@ -25,8 +25,7 @@
     $i_ID = $_POST['i_ID'];
     $i_salary = $_POST['i_salary'];
 			
-	echo " <br> Instructor table before insertion <br>";
-	show_instructor($conn);
+	
    
     $sql = "INSERT INTO instructor "."(ID,name, dept_name, salary) "."VALUES ".
                "('$i_ID','$i_name','$i_dept', '$i_salary')";
@@ -40,7 +39,7 @@
          
     echo "Entered data successfully\n";
 			
-	echo " <br> Instructor table after insertion <br>";
+	echo " <br> Customers <br>";
 	show_instructor($conn);
 			
     mysqli_close($conn);    

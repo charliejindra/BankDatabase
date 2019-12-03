@@ -42,7 +42,6 @@
          
     echo "Entered data successfully\n";
 			
-	echo " <br> Instructor table after insertion <br>";
 	show_card($conn);
 			
     mysqli_close($conn);    
