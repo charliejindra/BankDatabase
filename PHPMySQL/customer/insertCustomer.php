@@ -34,8 +34,7 @@
     $i_address1 = $_POST['i_address1'];
     $i_address2 = $_POST['i_address2'];
 			
-	echo " <br> Instructor table before insertion <br>";
-	#show_customer($conn);
+	
    
     $sql = "INSERT INTO customer "."(customer_ID, username, password, account_holder, Birthday, SSN, phone_number, email, address1, address2)"." VALUES "."('$i_customerID', '$i_username', '$i_password', '$i_fullName', '$i_birthday', '$i_ssn', '$i_phoneNumber', '$i_email', '$i_address1', '$i_address2')";
             
@@ -48,7 +47,6 @@
          
     echo "Entered data successfully\n";
 			
-	echo " <br> Instructor table after insertion <br>";
 	show_customer($conn);
 			
     mysqli_close($conn);    
