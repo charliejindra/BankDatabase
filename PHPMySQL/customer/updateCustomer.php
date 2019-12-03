@@ -23,7 +23,7 @@
     $i_AO = $_POST['i_AO'];
     $i_AT = $_POST['i_AT'];
 
-    if($i_ID = ""){
+    if($i_ID == ""){
         echo "You must provide an ID to update";
     }
     else{
