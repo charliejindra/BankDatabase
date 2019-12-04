@@ -13,7 +13,7 @@ function show_account($conn) {
 			
 			echo '<table border>';
 			echo '<thead><tr>';
-			echo '<th>'."ID".'</th>'.'<th>'."Name".'</th>'.'<th>'."Department".'</th>'.'<th>'."Salary".'</th>';
+			echo '<th>'."Account Number".'</th>'.'<th>'."Customer ID".'</th>'.'<th>'."Account Type".'</th>'.'<th>'."Balance".'</th>';
 			echo '</tr></thead>';
 			echo '<tbody>';
 
