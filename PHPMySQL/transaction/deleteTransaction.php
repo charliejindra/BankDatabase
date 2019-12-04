@@ -17,7 +17,7 @@
         
     $transaction_number = $_POST['transaction_number'];
 			
-	echo " <br> transaction_history table before delete <br>";
+	echo " <br> Transaction_history table before delete <br>";
 	show_transactions($conn);
    
     $sql = "DELETE FROM transaction_history WHERE transaction_number = $transaction_number";
@@ -31,7 +31,7 @@
          
     echo "Entered data successfully\n";
 			
-	echo " <br> transaction_history table after delete <br>";
+	echo " <br> Transaction_history table after delete <br>";
 	show_transactions($conn);
 			
     mysqli_close($conn);    

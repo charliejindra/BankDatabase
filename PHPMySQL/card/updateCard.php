@@ -16,6 +16,7 @@
     $i_CN = $_POST['i_CN'];
     $i_CT = $_POST['i_CT'];
     $i_AN = $_POST['i_AN'];
+    $i_CR = $_POST['i_CR'];
 
     if($i_CN == ""){
         echo "You must provide a Card Number to update";
@@ -29,6 +30,7 @@
 
     $sql_CT = "UPDATE `card` SET `card_type`= '$i_CT' WHERE card_number='$i_CN'";
     $sql_AN = "UPDATE `card` SET `account_number`= '$i_AN' WHERE card_number='$i_CN'";
+    $sql_CR = "UPDATE `card` SET `credit`= '$i_CR' WHERE card_number='$i_CN'";
     
     
     //mysqli_select_db($conn,'university');
@@ -53,6 +55,12 @@
         }
     }
 
+    if ($i_CR != ""){ 
+        $retval = mysqli_query($conn, $sql_CR); // procedural execution of query
+        if(! $retval ) {
+            die('Could not enter data: ' . mysqli_error($conn));
+        }
+    }
 
     echo "<br><br><br><br>";
     echo "Entered data successfully\n";

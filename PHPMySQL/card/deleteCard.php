@@ -17,7 +17,7 @@
         
     $card_number = $_POST['card_number'];
 			
-	echo " <br> card table before delete <br>";
+	echo " <br> Card table before delete <br>";
 	show_card($conn);
    
     $sql = "DELETE FROM card WHERE card_number = $card_number";
@@ -31,7 +31,7 @@
          
     echo "Entered data successfully\n";
 			
-	echo " <br> card table after delete <br>";
+	echo " <br> Card table after delete <br>";
 	show_card($conn);
 			
     mysqli_close($conn);    
