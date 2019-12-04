@@ -17,10 +17,11 @@
         
     $account_number = $_POST['account_number'];
 			
-	echo " <br> account table before delete <br>";
-	show_account($conn);
+	echo " <br> Account table before deletion <br>";
+    show_account($conn);
    
-    $sql = "DELETE FROM account WHERE account_number = $account_number";
+    $sql = "UPDATE `account` SET `customer_ID`= -1 WHERE account_number='$account_number'";
+
             
 			//mysqli_select_db($conn,'university');
     $retval = mysqli_query($conn, $sql); // procedural execution of query
@@ -31,7 +32,7 @@
          
     echo "Entered data successfully\n";
 			
-	echo " <br> account table after delete <br>";
+	echo " <br> Account table after deletion <br>";
 	show_account($conn);
 			
     mysqli_close($conn);    
