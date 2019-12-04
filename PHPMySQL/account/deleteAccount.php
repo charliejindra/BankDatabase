@@ -2,7 +2,7 @@
 <html>
 
    <head>
-      <title>Delete Account</title>
+      <title>Pig Banking - Delete Account</title>
    </head>
 
    <body>

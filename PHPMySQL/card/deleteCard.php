@@ -2,7 +2,7 @@
 <html>
 
    <head>
-      <title>Delete Card</title>
+      <title>Pig Banking - Delete Card</title>
    </head>
 
    <body>

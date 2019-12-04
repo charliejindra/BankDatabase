@@ -2,7 +2,7 @@
 <html>
 
    <head>
-      <title>Delete Customer</title>
+      <title>Pig Banking - Delete Customer</title>
    </head>
 
    <body>

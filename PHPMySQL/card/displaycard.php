@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html> 
+<title>Pig Banking - Display Card</title>
 <body >
 <div style="height:900px; background-color: lightblue;" align="center">
 <br><br><br><br>

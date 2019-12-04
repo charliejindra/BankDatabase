@@ -2,7 +2,7 @@
 <html>
 
    <head>
-      <title>Delete Transaction History</title>
+      <title>Pig Banking - Delete Transaction</title>
    </head>
 
    <body>

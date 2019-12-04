@@ -4,6 +4,7 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     border: 4px solid black;
     padding: 10px;
+    background-color: #559aed;
 }
 th{
     font-family: 'Courier New', Courier, monospace;
@@ -11,21 +12,26 @@ th{
     font-style: italic;
     border: 2px solid black;
     padding:10px;
+    background-color: #559aed;
+    text-align: center;
 }
 td{
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: center;
 }
 a{
     color:black;font-weight:bold;
     position: relative;
     left: 0;
-    background-color: rgba(228, 225, 225, 0.479);
+    /*background-color: rgba(228, 225, 225, 0.479);*/
+    background-color: lightblue;
     margin: .5em;
     padding: .5em .5em;
     height: 1.8em;
     border-radius: 3px;
     border: 1.5px solid black;
+    text-align: center;
 }
 a:hover{
     color: red;
@@ -36,5 +42,5 @@ a:hover{
 table {
     border: 3px solid black; padding:10px;
     align-content: center;
-    background-color: whitesmoke;
+    background-color: #93c7fa;
 }

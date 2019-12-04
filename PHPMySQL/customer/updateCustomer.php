@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html> 
+<title>Pig Banking - Update Customer</title>
 <body >
 <div style="background-color: lightblue;" align="center">
 <br><br><br><br>

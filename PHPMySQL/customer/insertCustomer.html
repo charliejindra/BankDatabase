@@ -2,7 +2,7 @@
 <html>
 
    <head>
-      <title>Add New Record in MySQL Database</title>
+      <title>Pig Banking - Insert Customer</title>
    </head>
 
    <body>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html> 
 <body >
+<title>Pig Banking - Display Customer</title>
 <div style="height:900px; background-color: lightblue;" align="center">
 <br><br><br><br>
 
